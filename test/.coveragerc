@@ -1,0 +1,15 @@
+[run]
+branch = True
+source =
+    .
+
+omit =
+    */migrations/*
+    test/wsgi.py
+    manage.py
+    fabfile.py
+    settings/*
+    *test*
+
+[html]
+directory = cover

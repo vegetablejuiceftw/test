@@ -1,0 +1,20 @@
+# Based on Node 8.x LTS image
+FROM node:8.11.3
+
+# Set the default directory where CMD will execute
+WORKDIR /app
+
+# Copy some utility files
+COPY ./test/.babelrc .
+COPY ./test/.eslintrc .
+COPY ./test/.eslintignore .
+
+# Install node requirements
+COPY ./test/package.json .
+COPY ./test/package-lock.json ./
+
+# Install node dependencies
+RUN npm install
+
+# Set the default command to execute when creating a new container
+CMD npm run build

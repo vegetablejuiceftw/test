@@ -1,0 +1,27 @@
+# Ignore everything in .idea
+.idea
+
+*.mo
+*.pyo
+*.pyc
+.sass-cache/
+npm-debug.log
+node_modules/
+venv/
+.cache/
+
+.data*/
+
+test/settings/local.py
+test/settings/local_test.py
+test/db.sqlite3
+test/app/webpack-stats.json
+test/app/build/
+test/assets/
+
+test/.cache
+test/.pytest_cache
+test/.coverage
+test/cover/
+
+test/docs/_build
