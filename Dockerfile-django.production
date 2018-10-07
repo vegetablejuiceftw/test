@@ -1,6 +1,6 @@
 # Production Dockerfile for Django app
 
-FROM python:3.6.6-slim
+FROM python:3.6.6
 
 # Install system requirements
 RUN apt-get update && \
@@ -9,7 +9,6 @@ RUN apt-get update && \
 
 RUN apt-get install -y --no-install-recommends python3-setuptools libtiff5-dev libjpeg62-turbo-dev zlib1g-dev
 RUN apt-get install -y --no-install-recommends libjpeg-dev
-RUN apk add jpeg-dev zlib-dev
 RUN pip install Pillow
 
 RUN rm -rf /var/lib/apt/lists/*
